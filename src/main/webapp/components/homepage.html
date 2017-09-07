@@ -1,0 +1,161 @@
+<!--<div ng-controller="mainController">-->
+<link href="./assets/js/ctyler.css" rel="stylsheet">
+
+<div class="full-body"> `
+    <div class="container-fluid">
+
+        <div class="col-sm-3 sidenav">
+            <h4 class="left-bar-head">{{details.first_name}} {{details.last_name}}</h4>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a ng-click="checkif()" class="sidemenu_bar"><span>Home</span></a></li>
+                <li><a ng-click="gotohistory()" class="sidemenu_bar"><span>User History</span></a></li>
+                <li><a href="#/payment" class="sidemenu_bar"><span>Payment Gateway</span></a></li>
+                <li><a href="https://www.sc.com/in/ways-to-bank/inperson-phone.html" class="sidemenu_bar"><span>Contact</span></a></li>
+                <li><a href="#/" class="sidemenu_bar"><span>Logout</span></a></li>
+
+
+            </ul>
+            <br>
+        </div>
+
+
+
+
+
+
+        <div class="table-for-userdetail col-sm-9">
+            <h1 class="blockard_head"> Welcome {{details.first_name}} {{details.last_name}}</h1>
+
+
+
+
+
+
+            <!--<div class="blocker_box"> -->
+
+            <h3><a ng-click="viewCard()" ng-show="!viewcardss">View Cards</a></h3>
+            <hr>
+            <div>
+                <!--
+        {{card}}
+        {{cards}}
+-->
+                <table class="table" ng-show="viewcardss">
+                    <thead>
+                        <tr>
+
+                            <th>Card Type</th>
+                            <th>Card Number</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                            <!--<th></th>-->
+                            <!--<th>heading1</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in card">
+
+                            <td ng-click="alert1()">{{x.type}}</td>
+                            <td>{{x.card_number}}</td>
+                            <td>{{x.active_status|status:'value'}}</td>
+                            <td> <button type="button" class="btn btn-info btn-lg" ng-click="block($index)">  <i class="fa fa-lock" aria-hidden="true"></i> </button>
+
+                                <!-- Modal -->
+
+                                <button type="button" class="btn btn-info btn-lg" ng-click="unblock($index)" style="ouline:none">  <i class="fa fa-unlock" aria-hidden="true"></i> </button>
+
+                                <!-- Modal -->
+                            </td>
+                        </tr>
+                        <div id="myModal" class="modal fade" role="dialog" ng-controller="myCtrl3">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">CONFIRMATION</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row" height=50px>
+                                            <p class="modal-text">Card Type : {{card[index].type}}</p>
+                                        </div>
+                                        <div class="row" height=50px>
+                                            <p class="modal-text">Card No. : {{card[index].card_number}}</p>
+                                        </div>
+                                        <div class="row" height=50px>
+                                            <p class="modal-text">Current Status : {{card[index].active_status}}</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-default pull-right" ng-click="finalBroker()">Block</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="myModal1" class="modal fade" role="dialog" ng-controller="myCtrl3">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">CONFIRMATION</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-sm-6">
+                                            <div class="row" height=50px>
+                                                <p class="modal-text">Card Type : {{card[index].type}}</p>
+                                            </div>
+                                            <div class="row" height=50px>
+                                                <p class="modal-text">Card No. : {{card[index].card_number}}</p>
+                                            </div>
+                                            <div class="row" height=50px>
+                                                <p class="modal-text">Current Status : {{card[index].active_status}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row" height=150px>
+                                                <select ng-model="unblockOptions">
+                                                    <option ng-repeat="x in options">{{x}}
+                                                    </option>
+                                                </select>
+                                                <button type="button" class="btn btn-info" ng-click="go()">Go</button>
+                                            </div>
+                                            <div class="row" height=150px>
+                                                <input type="text" ng-model="pass" ng-show="isVisible" placeholder="Password">
+                                                <input type="text" ng-model="otp" ng-show="isVisible1" placeholder="OTP">
+                                                <button type="button" class="btn btn-info" ng-disable="notShow" ng-show="isVisible1" ng-click="genOtp()">Generate OTP</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-default pull-right" ng-click="finalUnbroker()">Unblock</button>
+                                </div>
+                            </div>
+                        </div>
+                    </tbody>
+                </table>
+
+                <!--</div>-->
+            </div>
+        </div>
+
+    </div>
+    <!-- <a href="#!logout"><button class="btn btn-blue bottom-btns">Logout</button></a> -->
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="footer">
+                <p>Footer Text</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--</div>-->

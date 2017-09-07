@@ -1,0 +1,316 @@
+/*@CHARSET "ISO-8859-1";*/
+
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+
+
+/*    .row.content {height: 1500px}*/
+
+
+/* Set gray background color and 100% height */
+
+.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+    /* height: 87vh; */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/* Set black background color, white text and some padding */
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 30px;
+}
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+.footer {
+    position: relative;
+    height: 30px;
+    text-align: center;
+}
+
+.full-body {
+    height: 87vh;
+    position: relative;
+    /*  width: 20%;*/
+}
+
+.nav-pills>li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-stacked>li+li {
+    margin-top: 2px;
+    margin-left: 0;
+}
+
+.left-bar-head {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #eee;
+    padding: 22px;
+    margin-top: 0px;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover,
+.nav>li>a:focus,
+.nav>li>a:hover {
+    color: #004A6D;
+    /* border-bottom-color: #337ab7; */
+    background-color: rgb(241, 241, 241);
+    /* padding: 10px; */
+    /* padding-bottom: 5px; */
+    /* width: 22%; */
+    text-align: center;
+    /* padding-top:15px;
+  padding-bottom:15px; */
+}
+
+.sidemenu_bar>span {
+    padding-bottom: 10px;
+}
+
+.sidemenu_bar>span:hover {
+    border: 1px solid #004A6D;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: nonoe;
+    border-radius: none;
+    border-radius: 0px;
+    border-width: 2px;
+}
+
+.btn {}
+
+.main-nav {
+    position: relative;
+    left: 100%;
+}
+
+.blockard_head {
+    text-align: center;
+    padding-top: 11px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.top_head {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container {
+    max-width: 100%;
+}
+
+label {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.control-label {
+    width: 100%;
+    float: left;
+    display: inline;
+}
+
+.form-group {
+    /*float:left;*/
+    display: inline block;
+}
+
+.blocker_box {
+    position: absolute;
+    border: 1px solid #111;
+    padding: 110px;
+    left: 200%;
+    box-shadow: 1px 1.5px 1px 1.5px #444;
+    top: 80px;
+}
+
+.form-move {
+    position: relative;
+    left: 100px;
+    /*float:left;*/
+    display: inline;
+    max-width: 100%;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.blockard-bottom-buttons {}
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
+
+.contact-us img {
+    position: relative;
+    left: 45%;
+}
+
+.image-logo {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.img-logo {
+    position: relative;
+    left: 43%;
+    height: 170px;
+    width: 170px
+}
+
+.blocker_box2 {
+    text-align: center;
+}
+
+.form-login {
+    align-content: center;
+}
+
+.form-horizontal .form-group {
+    margin-right: -15px;
+    left: 30%;
+    border: 1px;
+    border-style: groove;
+    width: 400px;
+    height: 225px;
+}
+
+.contact {
+    float: right;
+}
+
+.inner-body {
+    position: relative;
+    bottom: 10%;
+}
+
+.center-padding {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-header {
+    text-align: center;
+}
+
+.image-logo {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+}
+
+img {
+    position: relative;
+    left: 45%;
+}
+
+.user {
+    padding-left: 10px;
+    padding-top: 25px;
+    text-align: left;
+}
+
+.pass {
+    padding-left: 10px;
+    padding-top: 25px;
+    text-align: left;
+}
+
+.container-full {
+    background-image: url(".assets/js/sc-logo.png");
+    opacity: 0.5;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.blocker_box2 {
+    background-color: transparent;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    left: 38%;
+}
+
+.btn-contact {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: relative;
+    left: 70%;
+}
+
+.btn-contact:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+
+/* @CHARSET "ISO-8859-1";
+<style>
+    Set height of the grid so .sidenav can be 100% (adjust if needed)
+    .row.content {height: 1500px}
+    
+    Set gray background color and 100% height
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    Set black background color, white text and some padding
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    On small screens, set height to 'auto' for sidenav and grid
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style> */

@@ -1,0 +1,49 @@
+<!-- -->
+
+<div class="full-body">
+    <div class="container-fluid">
+        <div class="col-sm-3 sidenav">
+            <h4 class="left-bar-head">{{details.first_name}} {{details.last_name}}</h4>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#/homepage" class="sidemenu_bar"><span>Home</span></a></li>
+                <li><a href="#/history" class="sidemenu_bar"><span>User History</span></a></li>
+                <li><a href="#/payment" class="sidemenu_bar"><span>Payment Gateway</span></a></li>
+                <li><a href="https://www.sc.com/in/ways-to-bank/inperson-phone.html" class="sidemenu_bar"><span>Contact</span></a></li>
+                <li><a href="#/" class="sidemenu_bar"><span>Logout</span></a></li>
+
+            </ul>
+            <br> </div>
+        <div class="table-for-userdetail col-sm-9">
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Card Type</th>
+                        <th>Card Number</th>
+                        <th>Status</th>
+
+                        <!--<th></th>-->
+                        <!--<th>heading1</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in card">
+
+                        <td>{{x.type}}</td>
+                        <td>{{x.card_number}}</td>
+                        <td>{{x.active_status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="footer">
+                <p>Footer Text</p>
+            </div>
+        </div>
+    </footer>
+</div>

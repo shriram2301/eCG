@@ -1,0 +1,70 @@
+<link href="./assets/js/ctyle1.css" rel="stylsheet">
+
+
+
+
+<div class="col-sm-3 sidenav">
+    <h4 class="left-bar-head">{{details.first_name}} {{details.last_name}}</h4>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#/homepage" class="sidemenu_bar"><span>Home</span></a></li>
+        <li><a href="#/history" class="sidemenu_bar"><span>User History</span></a></li>
+        <li><a href="#/payment" class="sidemenu_bar"><span>Payment Gateway</span></a></li>
+        <li><a href="https://www.sc.com/in/ways-to-bank/inperson-phone.html" class="sidemenu_bar"><span>Contact</span></a></li>
+        <li><a href="#/" class="sidemenu_bar"><span>Logout</span></a></li>
+
+    </ul>
+    <br>
+</div>
+<div class="col-md-9 top_head">
+
+
+
+    <div class="blocker_box">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <div>
+
+                        <select ng-model="card_type" ng-change="typeChange()">
+                                        <option ng-repeat="x in card">x.type</option>
+                                        </select>
+                    </div>
+                    <div>
+                        <p class="balance">Current Balance : {{card2.current_balance}}</p>
+                        <p class="amount"> Amount Payable : <input type="text" placeholder="200" disabled></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <select ng-model="unblockOptions">
+                                <option ng-repeat="x in options">{{x}}
+                                </option>
+                                </select>
+                        <button type="button" class="btn btn-info" ng-click="go()">Go</button>
+                    </div>
+                    <div>
+                        <input type="text" ng-model="pass" ng-show="isVisible" placeholder="Password">
+                        <input type="text" ng-model="otp" ng-show="isVisible1" placeholder="OTP">
+                        <button type="button" class="btn btn-info" ng-disable="notShow" ng-show="isVisible1" ng-click="genOtp()">Generate OTP</button>
+                    </div>
+                </div>
+                <div>
+                    <button ng-click="pay()" class="btn">Pay</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+
+</div>
+<footer class="col-sm-12">
+    <div class="row">
+        <div class="footer">
+            <p>Footer Text</p>
+        </div>
+    </div>
+</footer>

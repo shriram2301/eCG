@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://blockard-ecg.cbqxgk1l5ypu.ap-southeast-1.rds.amazonaws.com:3306/Blockard</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">12345678</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <!--Here we are mapping Pojo class not hbm-->
+     <mapping class="org.models.Login" />
+      <mapping class="org.models.Login" />
+       <mapping class="org.models.Card" />
+        <mapping class="org.models.User_Master" />
+         <mapping class="org.models.SMS" />
+          <mapping class="org.models.OtpTransaction" />
+         </session-factory>
+</hibernate-configuration>
